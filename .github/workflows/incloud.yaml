@@ -37,9 +37,14 @@ jobs:
           go get -v github.com/projectdiscovery/httpx/cmd/httpx
           go get -v github.com/projectdiscovery/nuclei/v2/cmd/nuclei
           go get -v github.com/projectdiscovery/mapcidr/cmd/mapcidr
+          go get -v github.com/projectdiscovery/notify/cmd/notify
         shell: bash
 
-
+      - name: Running SubFinder first
+        run: |
+          subfinder -h
+        shell: bash
+        
       - name: Running SubFinder for passive DNS enumeration
         run: |
           subfinder -dL input/domains.txt -config config/subfinder-config.yaml -o output/passive_subdomains.txt
@@ -63,7 +68,7 @@ jobs:
         shell: bash
       - name: Xray scan urls
         run: |
-          wget https://github.com/chaitin/xray/releases/download/1.7.1/xray_linux_amd64.zip
+          wget https://github.com/chaitin/xray/releases/download/1.8.4/xray_linux_amd64.zip
           unzip xray_linux_amd64.zip
           mv xray_linux_amd64 xray
           set +e ;for i in $(cat output/active_urls.txt ); do ./xray webscan --basic-crawler $i --html-output output/`date +%Y%m%d%H%M%S`.html;done
