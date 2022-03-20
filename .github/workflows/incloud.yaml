@@ -42,7 +42,7 @@ jobs:
 
       - name: Running naabu to check top all ports
         run: |
-          naabu -list input/target.txt  -rate 10000 -port 1- 65535 | tee output/active_ports.txt
+          naabu -list input/target.txt  -rate 10000 -port 1-65535 | tee output/active_ports.txt
         shell: bash
 
 
