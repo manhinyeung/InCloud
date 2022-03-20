@@ -13,7 +13,7 @@ jobs:
       - name: Setup golang
         uses: actions/setup-go@v2
         with:
-          go-version: 1.14
+          go-version: 1.17
 
       - name: Setup Dependencies
         run: sudo apt-get install libpcap-dev 
@@ -31,7 +31,7 @@ jobs:
         env:
           GO111MODULE: on
         run: |
-          go get -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder
+          go get -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@v2.4.9
           go get -v github.com/projectdiscovery/dnsx/cmd/dnsx
           go get -v github.com/projectdiscovery/naabu/v2/cmd/naabu
           go get -v github.com/projectdiscovery/httpx/cmd/httpx
@@ -52,7 +52,7 @@ jobs:
 
       - name: Running naabu to check top 1000 ports
         run: |
-          naabu -iL output/active_subdomains.txt  -rate 10000 -top-ports 1000 | tee output/active_ports.txt
+          naabu -list output/active_subdomains.txt  -rate 10000 -ports 1-65355 | tee output/active_ports.txt
         shell: bash
 
 
