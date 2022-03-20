@@ -38,16 +38,12 @@ jobs:
           go get -v github.com/projectdiscovery/nuclei/v2/cmd/nuclei
           go get -v github.com/projectdiscovery/mapcidr/cmd/mapcidr
           go get -v github.com/projectdiscovery/notify/cmd/notify
-        shell: bash
-
-      - name: Running notify first
-        run: |
-          notify -h
+          go get -v github.com/projectdiscovery/goflags
         shell: bash
         
       - name: Running SubFinder for passive DNS enumeration
         run: |
-          subfinder -dL input/domains.txt -config config/subfinder-config.yaml -pc $HOME/.config/notify/provider-config.yaml -o output/passive_subdomains.txt
+          subfinder -dL input/domains.txt -config config/subfinder-config.yaml -o output/passive_subdomains.txt
         shell: bash
 
       - name: Running dnsx for valid DNS filtering 
