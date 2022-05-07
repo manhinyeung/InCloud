@@ -1,4 +1,3 @@
-域名
 va.cmbc.com.cn
 xw.cmbc.com.cn
 leshouyin.cmbc.com.cn
