@@ -98,6 +98,10 @@ jobs:
       - name: Create local changes
         run: |
           git add output/nuclei_output.txt
+          git add output/active_urls.txt
+          git add output/active_ports.txt
+          git add output/active_subdomains.txt
+          git add output/passive_subdomains.txt
       - name: Commit results to Github
         run: |
           git config --local user.email "xshack38@gmail.com"
